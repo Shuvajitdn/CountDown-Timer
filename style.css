@@ -1,0 +1,159 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+    color: rgb(17, 16, 16);
+}
+
+/* Body & Background */
+body {
+    height: 100vh;
+    background-color: #ffcc00; /* Background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: backgroundChange 5s ease-in-out infinite;
+}
+
+@keyframes backgroundChange {
+    0% { background-color: #ffcc00; }
+    50% { background-color: #ff5e62; }
+    100% { background-color: #5e72e4; }
+}
+
+/* Container for Timer */
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    width: 380px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+/* Title */
+.tit h1 {
+    color: #444;
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+    color: #ff5e62;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+/* Timer Inputs */
+.top {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.top .h, .top .m, .top .s {
+    margin: 0 15px;
+}
+
+.time {
+    font-size: 50px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    width: 80px;
+    height: 60px;
+    transition: border-color 0.3s ease;
+}
+
+.time:focus {
+    border-color: #ff5e62;
+}
+
+/* Labels */
+.label {
+    opacity: 0.7;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    height: 12px;
+    background-color: #f3f3f3;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    background-color: #ff5e62;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+/* Buttons */
+.btn {
+    background-color: #ff5e62;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    width: 130px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff2e4e;
+    transform: scale(1.1);
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;  /* Buttons in a row */
+    margin-top: 20px;
+    width: 100%;
+}
+
+.bottom button {
+    margin: 0 10px;
+}
+
+/* Disabled Button State */
+button:disabled {
+    background-color: #e0e0e0;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+/* Message Display */
+.message {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff5e62;
+    text-align: center;
+    margin-top: 30px;
+    display: none;
+}
+
+/* Confetti Effect */
+.confetti {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    pointer-events: none;
+    z-index: 1000;
+}

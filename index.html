@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Jost:wght@500&family=Nunito:wght@500&family=Prompt:wght@500&family=Roboto+Slab:wght@700&family=Sofia+Sans:wght@500&display=swap" rel="stylesheet">
+    <title>Countdown Timer</title>
+</head>
+<body>
+    <div id="container">
+        <div class="tit"><h1>Countdown Timer</h1></div>
+        <div class="top">
+            <div class="h">
+                <input id="hour" type="number" max="99" min="0" value="0" class="time">
+                <p id="hour-label" class="label">Hours</p>
+            </div>
+            <div class="m">
+                <input id="minute" type="number" max="60" min="0" value="0" class="time">
+                <p id="min-label" class="label">Minutes</p>
+            </div>
+            <div class="s">
+                <input id="sec" type="number" max="60" min="0" value="0" class="time">
+                <p id="sec-label" class="label">Seconds</p>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+        
+        <!-- Buttons Below Timer -->
+        <div class="bottom">
+            <button id="start" class="btn">Start</button>
+            <button id="pause" class="btn" disabled>Pause</button>
+            <button id="reset" class="btn" disabled>Reset</button>
+        </div>
+
+    </div>
+    <div id="message" class="message"></div>
+    <div id="confetti" class="confetti"></div>
+    <script src="script.js"></script>
+</body>
+</html>
